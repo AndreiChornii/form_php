@@ -9,6 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>FORM</h1>
+    <main>
+        <form class="auth" action="">
+            <fieldset>
+                <legend>Авторизация</legend>
+                <div class="auth__row">
+                    <label for="username">User name</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="auth__row">
+                    <label for="userpass">User pass</label>
+                    <input type="password" id="userpass">
+                </div>
+                <div class="auth__row">
+                    <label for="useremail">User email</label>
+                    <input type="text" id="useremail">
+                </div>
+                <div class="auth__check">
+                    <label for="userpass">
+                        Subscribe
+                        <input type="checkbox" id="usersubscribe">
+                    </label>
+                </div>
+                <button>Login</button>
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
