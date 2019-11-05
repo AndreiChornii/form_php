@@ -15,23 +15,24 @@
                 <legend>Авторизация</legend>
                 <div class="auth__row">
                     <label for="username">User name</label>
-                    <input type="text" id="username">
+                    <input class="auth__text" type="text" id="username">
+                    <i class="auth__error">Don't contain (_, -, {}, $, 0-9, length > 5 characters)</i>
                 </div>
                 <div class="auth__row">
                     <label for="userpass">User pass</label>
-                    <input type="password" id="userpass">
+                    <input class="auth__text" type="password" id="userpass">
                 </div>
                 <div class="auth__row">
                     <label for="useremail">User email</label>
-                    <input type="text" id="useremail">
+                    <input class="auth__text" type="text" id="useremail">
                 </div>
-                <div class="auth__check">
-                    <label for="userpass">
-                        Subscribe
-                        <input type="checkbox" id="usersubscribe">
-                    </label>
+                <label class="auth__check">
+                    Subscribe
+                    <input type="checkbox" id="usersubscribe">
+                </label>
+                <div class="auth__row">
+                    <button class="auth__btn">Login</button>
                 </div>
-                <button>Login</button>
             </fieldset>
         </form>
     </main>
