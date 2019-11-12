@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/public/style.css">
-    <script src="/public/main.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <main>
         <form class="auth" action="">
             <fieldset>
                 <legend>Авторизация</legend>
@@ -31,10 +19,8 @@
                     <input type="checkbox" id="usersubscribe">
                 </label>
                 <div class="auth__row">
-                    <button class="auth__btn">Login</button>
+                    <button type="button" id="sendbtn" class="auth__btn">Login</button>
                 </div>
             </fieldset>
         </form>
-    </main>
-</body>
-</html>
+        <script src="/public/login.js"></script>

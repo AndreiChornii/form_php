@@ -1,6 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+ul, body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.header{
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 15px;
+    box-shadow: 0 0 2px 3px #0000004f;
+}
+
+.header__menu{
+    display: flex;
+}
+
+.header__link{
+    padding: 10px 25px;
+}
+
+.page{
+    padding: 15px;
+    margin: 0 auto;
+    min-height: 300px;
+    max-width: 1000px;
+    box-shadow: 0 0 2px 3px #0000004f;
+}
+
+.footer{
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 2px 3px #0000004f;
+    text-align: center;
+}
+
 .auth{
     max-width: 500px;
-    margin: 200px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 
 .auth__row{
