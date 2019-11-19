@@ -89,3 +89,11 @@ li{
     font-size: 14px;
     margin-top: 10px;
 }
+
+.auth__error_hide{
+    display: none;
+}
+
+.auth__error_show{
+    display: block;
+}
