@@ -37,6 +37,12 @@ function send() {
         isError = true;
     }
 
+    if (!(/^[а-яa-z0-9\-_\.]{2,25}$/i.test(userPass.value))) {
+        userPassError.classList.remove('auth__error_hide');
+        userPassError.classList.add('auth__error_show');
+        isError = true;
+    }
+
     if (isError) return null;
 
     var data = {
