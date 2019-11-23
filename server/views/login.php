@@ -14,7 +14,7 @@
                 <div class="auth__row">
                     <label for="userphone">User phone</label>
                     <input class="auth__text" type="text" id="userphone">
-                    <i class="auth__error auth__error_hide">Not valid phone (+38063070523)</i>
+                    <i class="auth__error auth__error_hide">Not valid phone (+380630705237)</i>
                 </div>
                 <div class="auth__row">
                     <label for="userpass">User pass</label>
