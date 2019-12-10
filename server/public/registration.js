@@ -58,21 +58,25 @@ formManager.send = function send() {
         subscribe: this.subscribe.checked,
     }
 
-    fetch('/login', {
+    fetch('/registration', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(data)
+    }).then(function(response){
+        return response.json();
+    }).then(function(data){
+        console.log(data);
+        alert(data.message);
     });
-}
+};
 
 formManager.setClearHandler = function setClearHandler(){
     var elements = document.querySelectorAll('.auth__text');
 
     elements.forEach(function(element) {
         element.onclick = function(){
-            console.log(this.nextElementSibling);
             this.nextElementSibling.classList.remove('auth__error_show');
             this.nextElementSibling.classList.add('auth__error_hide');
         }

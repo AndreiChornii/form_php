@@ -19,9 +19,19 @@ if ($method === 'GET') {
     if ($route === '/contacts') {
         include './views/contacts.php';
     }
-
+ 
+    if ($route === '/registration') {
+        include './views/registration.php';
+    }
+    
     if ($route === '/login') {
         include './views/login.php';
+    }
+    
+    if ($route === '/users') {
+        $users = getUsers();
+//        var_dump($users);
+        include './views/users.php';
     }
 
     include './views/footer.php';

@@ -14,7 +14,11 @@
         <nav>
             <ul class="header__menu">
                 <li><a class="header__link" href="/">Home</a></li>
-                <li><a class="header__link" href="/login">Login</a></li>
+                
+                <li><a class="header__link" href="/login">login</a></li>
+                <li><a class="header__link" href="/users">Users</a></li>
+                
+                <li><a class="header__link" href="/registration">Registration</a></li>
                 <li><a class="header__link" href="/contacts">Contacts</a></li>
             </ul>
         </nav>

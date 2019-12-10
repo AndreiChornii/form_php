@@ -21,11 +21,10 @@ function getUsers(){
 //echo "Соединение с MySQL установлено!" . PHP_EOL;
 //echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
 
-    $users = $DB->query('select username, age, email
-                  from users 
-                 where age > 50');
+    $data = $DB->query('select id, username, email, phone
+                  from users');
 
-    $users->fetch_all(MYSQLI_ASSOC);
+    $users = $data->fetch_all(MYSQLI_ASSOC);
 //    var_dump($users->fetch_all(MYSQLI_ASSOC));
 
     mysqli_close($DB);

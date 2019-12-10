@@ -8,20 +8,32 @@
 
 if ($method === 'POST') {
 // header('Content-type:application/json');
-    if ($route === '/login') {
+    if ($route === '/registration') {
         $request = json_decode(file_get_contents('php://input'), true);
 
         $isValid = valid($request);
 
         if ($isValid) {
-            $response = [
+            $responseSuccess = [
                 'result' => true,
-                'message' => 'registration successful'
+                'message' => 'registration successful, go to login'
+            ];
+            
+            $responseFail = [
+                'result' => false,
+                'message' => 'email or phone already exists'
             ];
             $request['age'] = 50;
-            addUser($request);
+            
+            $isSave = addUser($request);
+            
+            if($isSave) {
+                echo json_encode($responseSuccess);
+            } else {
+                echo json_encode($responseFail);
+            }
 
-            echo json_encode($response);
+            
         } else {
             $response = [
                 'result' => false,
