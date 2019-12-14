@@ -26,7 +26,7 @@
                     <input type="checkbox" id="usersubscribe">
                 </label>
                 <div class="auth__row">
-                    <button type="button" id="sendbtn" class="auth__btn">Login</button>
+                    <button type="button" id="sendbtn" class="auth__btn">Registration</button>
                 </div>
             </fieldset>
         </form>

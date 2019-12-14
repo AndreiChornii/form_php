@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include './handlers/mysqli.php';
 include './handlers/validate.php';
