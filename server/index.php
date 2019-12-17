@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include './handlers/dump.php';
 include './handlers/mysqli.php';
 include './handlers/validate.php';
 
@@ -12,4 +12,4 @@ include './handlers/routesMethodGet.php';
 include './handlers/routesMethodPost.php';
 
 
-getUsers();
+//getUsers();
