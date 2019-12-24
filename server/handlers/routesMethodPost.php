@@ -43,6 +43,7 @@ if ($method === 'POST') {
             echo json_encode($response);
         }
     }
+    
     if ($route === '/login') {
         $email = $_POST['email'];
         $password = $_POST['password'];

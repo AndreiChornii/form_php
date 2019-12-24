@@ -12,7 +12,7 @@ var formManager = {
     password: document.querySelector("#userpass"),
     passwordError: document.querySelector("#userpass + .auth__error"),
     subscribe: document.querySelector("#usersubscribe"),
-    sendBtn: document.querySelector("#sendbtn"),
+    sendBtn: document.querySelector("#sendbtn")
 }
 
 formManager.valid = function valid(){
@@ -55,7 +55,7 @@ formManager.send = function send() {
         email: this.email.value,
         phone: this.phone.value,
         password: this.password.value,
-        subscribe: this.subscribe.checked,
+        subscribe: this.subscribe.checked
     }
 
     fetch('/registration', {

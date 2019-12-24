@@ -9,8 +9,8 @@
 
 
 function getUsers(){
-    $DB = mysqli_connect("127.0.0.1", "andrei", "Aaaaaaa1", "website");
-
+//    $DB = mysqli_connect("127.0.0.1", "andrei", "Aaaaaaa1", "website");
+    $DB = mysqli_connect("127.0.0.1", "root", "Rhenj567", "website");
     if (!$DB) {
         echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
 //    echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -22,7 +22,7 @@ function getUsers(){
 //echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
 
     $data = $DB->query('select id, username, email, phone
-                  from users');
+                          from users');
 
     $users = $data->fetch_all(MYSQLI_ASSOC);
 //    var_dump($users->fetch_all(MYSQLI_ASSOC));
@@ -33,7 +33,8 @@ function getUsers(){
 }
 
 function getUser($email){
-    $DB = mysqli_connect("127.0.0.1", "andrei", "Aaaaaaa1", "website");
+//    $DB = mysqli_connect("127.0.0.1", "andrei", "Aaaaaaa1", "website");
+    $DB = mysqli_connect("127.0.0.1", "root", "Rhenj567", "website");
 
     if (!$DB) {
         echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
@@ -46,8 +47,8 @@ function getUser($email){
 //echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
 
     $dataUser = $DB->query("select id, username, password, email, phone
-                          from users 
-                         where email = '{$email}'");
+                              from users 
+                             where email = '{$email}'");
 
     $user = $dataUser->fetch_all(MYSQLI_ASSOC);
 //    var_dump($users->fetch_all(MYSQLI_ASSOC));
@@ -58,7 +59,8 @@ function getUser($email){
 }
 
 function addUser($data){
-    $DB = mysqli_connect("127.0.0.1", "andrei", "Aaaaaaa1", "website");
+//    $DB = mysqli_connect("127.0.0.1", "andrei", "Aaaaaaa1", "website");
+    $DB = mysqli_connect("127.0.0.1", "root", "Rhenj567", "website");
 
     if (!$DB) {
         echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
@@ -68,7 +70,7 @@ function addUser($data){
     }
     
     $sql = "insert into users(username, email, `password`, phone, age)
-            VALUES ('{$data['name']}', '{$data['email']}', '{$data['password']}', '{$data['phone']}', {$data['age']});";
+                       VALUES ('{$data['name']}', '{$data['email']}', '{$data['password']}', '{$data['phone']}', {$data['age']});";
 //
 //echo "Соединение с MySQL установлено!" . PHP_EOL;
 //echo "Информация о сервере: " . mysqli_get_host_info($link) . PHP_EOL;
